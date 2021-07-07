@@ -1,0 +1,51 @@
+{
+    "name": "cmgmyr/messenger",
+    "description": "Simple user messaging tool for Laravel",
+    "keywords": ["laravel", "messenger", "messaging", "user messaging"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Gmyr",
+            "email": "cmgmyr@gmail.com",
+            "homepage": "https://github.com/cmgmyr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/config": "^5.5|^6.0|^7.0|^8.0",
+        "illuminate/support": "^5.5|^6.0|^7.0|^8.0",
+        "illuminate/database": "^5.5|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "adamwathan/faktory": "0.3.*",
+        "friendsofphp/php-cs-fixer": "^2.18",
+        "orchestra/testbench": "^3.0|^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cmgmyr\\Messenger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cmgmyr\\Messenger\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html build/coverage",
+        "format": "vendor/bin/php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cmgmyr\\Messenger\\MessengerServiceProvider"
+            ]
+        }
+    }
+}
